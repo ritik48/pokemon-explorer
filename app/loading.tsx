@@ -1,3 +1,3 @@
 export default function Loading() {
-  return null
+  return <div className="text-xl text-center my-20">Loading...</div>;
 }
