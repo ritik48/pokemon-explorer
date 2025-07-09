@@ -58,22 +58,12 @@ export default function PokemonExplorer({
         )}
       </div>
 
-      {displayList.length > 0 ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 mb-8">
+      {displayList.length > 0 && (
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-8">
           {displayList.map((pokemon) => (
             <PokemonCard key={pokemon.name} pokemon={pokemon} />
           ))}
         </div>
-      ) : (
-        <Card className="text-center py-12">
-          <CardContent>
-            <p className="text-lg text-muted-foreground">
-              {isSearching
-                ? `No Pokemon found matching "${search}"`
-                : "No Pokemon found"}
-            </p>
-          </CardContent>
-        </Card>
       )}
 
       {!isSearching && (
