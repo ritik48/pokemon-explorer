@@ -33,7 +33,7 @@ export default function Pagination({
   const endResult = Math.min(currentPage * resultsPerPage, totalResults);
 
   return (
-    <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+    <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
       <div className="text-sm text-muted-foreground">
         {totalResults > 0 && (
           <span>

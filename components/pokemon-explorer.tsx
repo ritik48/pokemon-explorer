@@ -36,10 +36,10 @@ export default function PokemonExplorer({
   return (
     <>
       <div className="text-center mb-8">
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-800 dark:text-white mb-4">
+        <h1 className="text-xl sm:text-4xl md:text-6xl font-bold text-gray-800 dark:text-white mb-4">
           Pokemon Explorer
         </h1>
-        <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
+        <p className="text-sm sm:text-lg text-gray-600 dark:text-gray-300 mb-6">
           Discover and explore the world of Pokemon
         </p>
 
@@ -59,7 +59,7 @@ export default function PokemonExplorer({
       </div>
 
       {displayList.length > 0 && (
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-8">
+        <div className="w-[80%] sm:max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-8">
           {displayList.map((pokemon) => (
             <PokemonCard key={pokemon.name} pokemon={pokemon} />
           ))}
